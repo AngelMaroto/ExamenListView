@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.examenpruebalistview.Controller.JugadoresController">
+   <children>
+      <Text layoutX="73.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Código:" />
+      <Text layoutX="73.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre:" />
+      <Text layoutX="73.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ciudad:" />
+      <Text layoutX="73.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Presupuesto:" />
+      <Text fill="RED" layoutX="384.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modificar Equipo y Plantilla">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtCodigoMod" layoutX="162.0" layoutY="105.0" />
+      <TextField fx:id="txtNombreMod" layoutX="162.0" layoutY="172.0" />
+      <TextField fx:id="txtPresupuestoMod" layoutX="162.0" layoutY="298.0" />
+      <ComboBox fx:id="cmbCiudad" layoutX="162.0" layoutY="233.0" prefWidth="150.0" />
+      <Button fx:id="btnModificarMod" onAction="#modificarEquipo" layoutX="144.0" layoutY="469.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="86.0" text="Modificar">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnVolver" onAction="#cerrarPantalla" layoutX="349.0" layoutY="469.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="86.0" text="Volver">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <ListView fx:id="tableJugadores" layoutX="560.0" layoutY="130.0" prefHeight="385.0" prefWidth="405.0" />
+      <Text layoutX="560.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Plantilla de Jugadores" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.examenpruebalistview.Controller.EquiposController">
+   <children>
+      <Text fill="#3b21ff" layoutX="423.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LIGA DE FUTBOL">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="96.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Código:" />
+      <Text layoutX="96.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre:" />
+      <Text layoutX="96.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ciudad:" />
+      <Text layoutX="96.0" layoutY="277.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Presupuesto:" />
+      <TextField fx:id="txtCode" layoutX="194.0" layoutY="113.0" />
+      <TextField fx:id="txtNombre" disable="true" layoutX="194.0" layoutY="160.0" />
+      <TextField fx:id="txtCiudad" disable="true" layoutX="194.0" layoutY="211.0" />
+      <TextField fx:id="txtPresupuesto" disable="true" layoutX="194.0" layoutY="260.0" />
+      <Button fx:id="btnBuscar" onAction="#buscarEquiposPorCodigo" layoutX="382.0" layoutY="113.0" mnemonicParsing="false" text="Buscar" />
+      <Line endX="-15.0" endY="186.0" layoutX="555.0" layoutY="174.0" startX="-15.0" startY="-77.0" />
+      <TableView fx:id="tablePartidos" layoutX="96.0" layoutY="387.0" prefHeight="200.0" prefWidth="887.0">
+        <columns>
+          <TableColumn fx:id="colID" prefWidth="87.0" text="ID Partido" />
+          <TableColumn fx:id="colFecha" prefWidth="206.0" text="Fecha" />
+           <TableColumn fx:id="colRival" prefWidth="213.0" text="Rival" />
+           <TableColumn fx:id="colEspectadores" prefWidth="289.0" text="Espectadores" />
+           <TableColumn fx:id="colJugado" prefWidth="91.0" text="Jugado" />
+        </columns>
+      </TableView>
+      <Text layoutX="722.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha Partido" />
+      <DatePicker fx:id="dpFechaPartido" layoutX="816.0" layoutY="113.0" />
+      <Text layoutX="722.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rival" />
+      <Text layoutX="722.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Espectadores" />
+      <TextField fx:id="txtRival" layoutX="816.0" layoutY="160.0" prefHeight="25.0" prefWidth="174.0" />
+      <TextField fx:id="txtEspectadores" layoutX="816.0" layoutY="211.0" prefHeight="25.0" prefWidth="174.0" />
+      <Button fx:id="btnModificar" onAction="#abrir" layoutX="833.0" layoutY="260.0" mnemonicParsing="false" text="Modificar datos equipo" />
+      <Button fx:id="btnVerPartidos" onAction="#verPartidos" layoutX="382.0" layoutY="260.0" mnemonicParsing="false" text="Ver Partidos Equipo" />
+      <Button fx:id="btnNuevo" onAction="#crearNuevoPartido" layoutX="194.0" layoutY="621.0" mnemonicParsing="false" text="Nuevo Partido" />
+      <Button fx:id="btnBorrar" onAction="#borrarPartidoSeleccionado" layoutX="397.0" layoutY="621.0" mnemonicParsing="false" text="Borrar Partido" />
+      <Button fx:id="btnJugar" onAction="#jugarPartido" layoutX="625.0" layoutY="621.0" mnemonicParsing="false" text="Jugar Partido" />
+      <Button fx:id="btnLimpiar" onAction="#limpiarCamposPartido" layoutX="790.0" layoutY="621.0" mnemonicParsing="false" text="Limpiar Campos Partidos" />
+   </children>
+</AnchorPane>
