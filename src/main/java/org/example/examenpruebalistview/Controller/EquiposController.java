@@ -15,8 +15,6 @@ import org.example.examenpruebalistview.model.Partidos;
 import org.example.examenpruebalistview.util.HibernateUtil;
 import org.hibernate.Session;
 
-
-import java.io.IOException;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.List;
